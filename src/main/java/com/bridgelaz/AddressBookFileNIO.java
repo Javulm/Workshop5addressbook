@@ -12,23 +12,12 @@ import java.util.stream.Collectors;
 public class AddressBookFileNIO {
     public static String ADDRESS_BOOK_PATH = "addressBook.txt";
 
-    /**
-     * creating a method name as readFromFile
-     * this will Read data from file
-     * @throws IOException
-     */
     public void readFromFile() throws IOException {
         Path path = Paths.get(ADDRESS_BOOK_PATH);
         System.out.println("The contact person's details in the address book file are: ");
         Files.lines(path).map(String::trim).forEach(System.out::println);
     }
 
-    /**
-     * create a method name a writeToFile, this is parameterized method
-     * in this method Writing data into file
-     * @param addressBookSystem all persons deta stored
-     * @throws IOException
-     */
     public void writeToFile(Map<String, Set<ContactPerson>> addressBookSystem) throws IOException {
         Path path = Paths.get(ADDRESS_BOOK_PATH);
         if (Files.notExists(path))

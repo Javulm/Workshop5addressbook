@@ -6,14 +6,6 @@ public class ContactPerson {
     private long phoneNo;
     private String emailId;
 
-    /**
-     * Used getter and setter to set and get the value.
-     * Setter is used to set the value
-     * Getter is used to get the value
-     * create a get methods name as getFirstName, getLastName ......
-     * The get method returns the value of the variable
-     *  @return firstName,lastName.....
-     */
 
     public String getFirstName() {
         return firstName;
@@ -46,17 +38,6 @@ public class ContactPerson {
         return emailId;
     }
 
-    /**
-     * create a parameterized constructor
-     * @param firstName persons in address book
-     * @param lastName persons in address book
-     * @param address persons in address book
-     * @param city persons in address book
-     * @param state persons in address book
-     * @param zip persons in address book
-     * @param phoneNo persons in address book
-     * @param emailId persons in address book
-     */
 
     public ContactPerson(String firstName, String lastName, String address, String city, String state, int zip,
                          long phoneNo, String emailId) {
@@ -92,19 +73,10 @@ public class ContactPerson {
         return true;
     }
 
-    /**
-     * create a method hashcode
-     * @return 10
-     */
     public int hashCode() {
         return 10;
     }
 
-    /**
-     * overriding the toString() method
-     * @return firstname , lastName,Address,Zip,City,State,email,phone number.
-     *
-     */
     @Override
     public String toString() {
         return "firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
